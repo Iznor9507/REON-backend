@@ -46,6 +46,8 @@ module.exports.TodosControllers = {
         text: req.body.text,
         title: req.body.title,
       });
+      todo = await ModelTodos.find();
+
       return res.json(todo);
     } catch (e) {
       return res.json(e.message);
