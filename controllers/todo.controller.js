@@ -32,7 +32,11 @@ module.exports.TodosControllers = {
 
   getTodo: async (req, res) => {
     try {
+      // const { page = Math.floor(todo.length / 2), limit = 2 } = req.query;
       const todo = await ModelTodos.find();
+      // .limit(limit * 1)
+      // .skip((page - 1) * limit);
+
       return res.json(todo);
     } catch (e) {
       return res.json(e.message);
