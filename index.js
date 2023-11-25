@@ -15,5 +15,5 @@ mongoose
   .catch((req, res) => console.log("ОШИБКА ПОДКЛЮЧЕНИЯ К СЕРВЕРУ", req));
 
 app.listen(port, (req, res) => {
-  console.log("СЕРВЕР ЗАПУЩЕН");
+  console.log("СОЕДИНЕНИЕ К СЕРВЕРУ...");
 });
